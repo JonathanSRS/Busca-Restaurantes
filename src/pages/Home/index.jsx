@@ -1,13 +1,28 @@
 import React, {useState} from "react";
+import Slider from 'react-slick';
 import TextField, { Input } from "@material/react-text-field";
 import MaterialIcon from "@material/react-material-icon";
 
 import logo from './../../assets/logo.svg'
+import pizza from './../../assets/pizza_640px.jpg'
+import frango from "./../../assets/food-frango_640px.jpg"
+import bife from "./../../assets/food-bife_640px.jpg"
+import bread from "./../../assets/breads_640px.jpg"
 
-import { Container, Logo, Search, Wrapper, Map } from "./styled";
+import { Container, Logo, Search, Wrapper, Map, CarouselTitle, Carousel } from "./styled";
+import { Card } from "../../componentes";
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')
+
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        adaptiveHeight: true,
+    };
 
     return(
         <Wrapper>
@@ -24,6 +39,14 @@ const Home = () => {
                     value={inputValue}
                     onChange={(e) =>  setInputValue(e.target.value)}/>
                 </TextField>
+                <CarouselTitle>Na sua Área</CarouselTitle>
+                <Carousel {...settings}>
+                    <Card photo={bread}/>
+                    <Card photo={bife}/>
+                    <Card photo={frango}/>
+                    <Card photo={frango}/>
+                    <Card photo={pizza}/>
+                </Carousel>
                 </Search>
             </Container>
             <Map />

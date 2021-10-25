@@ -4,6 +4,7 @@
   "private": true,
   "description": "api de busca de resturantes mais proximos da sua localização",
   "dependencies": {
+    "@material/react-material-icon": "^0.15.0",
     "@material/react-text-field": "^0.15.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",

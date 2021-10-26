@@ -35,3 +35,10 @@ export const Title = styled.span`
     line-height: 19px;
     margin-bottom: 10px;
 `;
+
+export const RestaurantPhoto = styled.img`
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+`;

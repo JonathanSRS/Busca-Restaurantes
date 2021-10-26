@@ -9,8 +9,9 @@ import frango from "./../../assets/food-frango_640px.jpg"
 import bife from "./../../assets/food-bife_640px.jpg"
 import bread from "./../../assets/breads_640px.jpg"
 
-import { Container, Logo, Search, Wrapper, Map, CarouselTitle, Carousel } from "./styled";
-import { Card, Modal, RestaurantCard } from "../../componentes";
+import { Container, Logo, Search, Wrapper, CarouselTitle, Carousel } from "./styled";
+import { Card, Modal, RestaurantCard, Map } from "../../componentes";
+
 
 const Home = () => {
     const [inputValue, setInputValue] = useState('')

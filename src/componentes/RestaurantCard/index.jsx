@@ -1,7 +1,14 @@
 import React from "react";
 
-import { Restaurant } from "./styles";
+import { Address, Restaurant, RestaurantInfo, Title } from "./styles";
 
-const RestaurantCard = () => <Restaurant />;
+const RestaurantCard = () => 
+<Restaurant>
+    <RestaurantInfo>
+        <Title>Nome do Restaurante</Title>
+        <p>avaliação</p>
+        <Address>endereço</Address>
+    </RestaurantInfo>
+</Restaurant>;
 
 export default RestaurantCard;

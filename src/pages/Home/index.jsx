@@ -10,7 +10,7 @@ import bife from "./../../assets/food-bife_640px.jpg"
 import bread from "./../../assets/breads_640px.jpg"
 
 import { Container, Logo, Search, Wrapper, CarouselTitle, Carousel, ModalTitle, ModalContent } from "./styled";
-import { Card, Modal, RestaurantCard, Map } from "../../componentes";
+import { Card, Modal, RestaurantCard, Map, Loader } from "../../componentes";
 
 
 const Home = () => {
@@ -56,6 +56,8 @@ const Home = () => {
                     onKeyPress={handleKeyPress}
                     onChange={(e) =>  setInputValue(e.target.value)}/>
                 </TextField>
+                {restaurants.lenght > 0?(
+                    <>
                 <CarouselTitle>Na sua Área</CarouselTitle>
                 <Carousel {...settings}>
                     {restaurants.map((restaurant)=>(
@@ -71,6 +73,10 @@ const Home = () => {
                     <Card photo={frango} title=""/>
                     <Card photo={pizza} title="Pizzaria"/>
                 </Carousel>
+                </>
+                ):(
+                    <Loader/>
+                )}
                 </Search>
                 {restaurants.map((restaurant) => (
                 <RestaurantCard onClick={()=> 
